@@ -12,11 +12,11 @@
         <ul class="flex items-center">
                 
             <li>
-                <a href="" class="p-3">Home</a>
+                <a href="/" class="p-3">Home</a>
 
             </li>
             <li>
-                <a href="" class="p-3">Dashboard</a>
+                <a href="{{ route('dashboard') }}" class="p-3">Dashboard</a>
             </li>
             <li>
                 <a href="" class="p-3">Post</a>
@@ -27,11 +27,11 @@
             {{-- @if (auth()->user()) --}}
           @auth  
             <li>
-                <a href="" class="p-3">Zain Imtiaz</a>
+                <a href="" class="p-3">{{ auth()->user()->name }}</a>
 
             </li>
             <li>
-                <form action="{{ route('logout') }}" method="post" class="inline">
+                <form action="{{ route('logout') }}" method="post" class="p-3 inline">
                     @csrf
                 <button type="submit">Logout</button>
                 </form>

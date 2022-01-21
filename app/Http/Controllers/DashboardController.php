@@ -11,7 +11,8 @@ class DashboardController extends Controller
        $this->middleware(['auth']) ;
     }
    public function index(){
-    //    dd(auth()->user());
+       
+      
        return view('dashboard');
    }
 }
